@@ -11,7 +11,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Insert new score (if received from the game)
 if (isset($_POST['player_name']) && isset($_POST['score'])) {
     $player_name = mysqli_real_escape_string($conn, $_POST['player_name']);
     $score = mysqli_real_escape_string($conn, $_POST['score']);
